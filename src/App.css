@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("./assets/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.logo-container {
+  display: flex;
+}
+
+.MIST_logo,
+.AE_logo {
+  width: 50%;
+  margin-top: 60px;
+  margin-left: 120px;
+  margin-right: 120px;
+}
+
+.AE_logo {
+  text-align: right;
+}
+
+.MIST_logo img,
+.AE_logo img {
+  height: 75%;
+}
+
+.middle-text {
+  position: absolute;
+  font-family: "Audiowide", sans-serif;
+  width: 100vw;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 72px;
+  display: flex;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  letter-spacing: 0.09em;
+  color: #3b8ce7; /* Foundation /Blue/blue-500 */
+  text-align: center;
+  transition: opacity 0.5s ease;
+}
+
+.credits_container {
+  position: absolute;
+  bottom: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-family: "Kode Mono", monospace;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  color: #7cb2ef;
+  opacity: 0.9;
+}
+
+.superviser {
+  margin-left: 120px;
+}
+.members {
+  margin-right: 120px;
+}
+
+.superviser,
+.members {
+  display: flex;
+  flex-direction: column;
+}
+
+.superviser > div:nth-child(1) {
+  text-align: left;
+  color: #3b8ce7;
+}
+
+.members > div {
+  text-align: right;
+}
+
+.buttons-container {
+  position: absolute;
+  bottom: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.button-set {
+  display: flex;
+  justify-content: center;
+  padding-top: 60px;
+}
+
+.game-console {
+  position: absolute;
+  bottom: 60px;
+  width: 80vw;
+  transform: translateX(-50%);
+  left: 50%;
+  display: flex;
+}
+
+.control {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.control-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.red-switch,
+.green-switch {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.red-switch {
+  background: #e21c1c;
+  box-shadow: 2px 2px 5px #8b0000, -2px -2px 5px #ff6a6a;
+}
+
+.green-switch {
+  background: #3bad29;
+  box-shadow: 2px 2px 5px #127f00, -2px -2px 5px #85ff72;
+}
+.red-switch:hover,
+.green-switch:hover {
+  transform: translateY(2px);
+}
+
+.green-switch:active {
+  transform: translateY(0);
+  box-shadow: inset 5px 5px 15px #127f00, inset -5px -5px 15px #127f00;
+}
+
+.red-switch:active {
+  transform: translateY(0);
+  box-shadow: inset 5px 5px 15px #8b0000, inset -5px -5px 15px #8b0000;
+}
+
+.state {
+  width: 100%;
+  display: flex;
+  padding-left: 120px;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.bar_no {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: rgba(54, 161, 204, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Audiowide", sans-serif;
+  color: #a5caf4;
+  font-size: 36px;
+}
+
+.state-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.state-bar > div:not(:last-of-type) {
+  width: 60px; /* Adjust the width to desired size */
+  height: 60px; /* Adjust the height to desired size */
+  border-radius: 50%; /* Makes it a circle */
+  margin-bottom: 40px; /* Gap between each item */
+}
+
+.green-off {
+  background-color: #2a6319;
+  opacity: 0.5;
+}
+
+.yellow-off {
+  background-color: #66651c;
+  opacity: 0.5;
+}
+
+.red-off {
+  background-color: #5d0e07;
+  opacity: 0.5;
+}
+
+.green-active {
+  background-color: #75fa4c;
+  box-shadow: 0px 0px 18px rgba(117, 250, 76, 0.75);
+  opacity: 0.9;
+}
+
+.yellow-active {
+  background-color: #fffe54;
+  box-shadow: 0px 0px 18px rgba(255, 254, 84, 0.75);
+  opacity: 0.9;
+}
+
+.red-active {
+  box-shadow: 0px 0px 18px rgba(235, 50, 35, 0.75);
+  background-color: #eb3223;
+  opacity: 0.9;
+}
